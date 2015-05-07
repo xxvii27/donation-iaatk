@@ -8,6 +8,8 @@
     <!-- Optional theme -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css">
     <!-- Latest compiled and minified JavaScript -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="donate.js" type="text/javascript" charset="utf-8"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Donations and Products</title>
@@ -27,26 +29,45 @@
     <div class="container">
         <form class="col-lg-12 form-inline">
             <h1>Donation</h1>
-            <select class="form-control">
-                <option>Select Amount..</option>
-                <option>$25</option>
-                <option>$50</option>
-                <option>$100</option>
-                <option>$250</option>
-                <option>$500</option>
-                <option>Custom Amount</option>
+            <select id='amount-select' class="form-control">
+                <option>Select Amount.... (In Dollars)</option>
+                <option>25</option>
+                <option>50</option>
+                <option>100</option>
+                <option>250</option>
+                <option>500</option>
             </select>
             <div class="input-group">
                 <div class="input-group-addon">$</div>
-                <input type="text" class="form-control" id="exampleInputAmount" placeholder="Amount">
+                <input type="text" class="form-control" id="inputAmount" placeholder="Amount">
             </div>
-            <select class="form-control">
-                <option>Select Donation Purpose..</option>
+            <select id='donation-type' class="form-control">
+                <option>Select a Donation..</option>
                 <option>IAATK Foundation</option>
                 <option>Orphanage</option>
             </select>
-            <button type="button" class="btn btn-default">Add to Cart</button>
+            <button id='addCart1' type="button" class="btn btn-default">Add to Cart</button>
         </form>
+        <form class="col-lg-12 form-inline">
+            <h1>Products</h1>
+            <select id='product-type' class="form-control">
+                <option>Select a Product..</option>
+                <option>It's All About The Kids Cards $25</option>
+                <option>Adopt a College Student $100</option>
+                <option>Donate and Join the University Club $500</option>
+            </select>
+            <button id='addCart2' type="button" class="btn btn-default">Add to Cart</button>
+        </form>
+        <section class="col-lg-12">
+            <h1>Cart</h1>
+            <section id='cart'>
+            </section>
+            <section >
+                <h4>Total: </h4>
+                <h4 id='total'></h4>
+            </section>
+            <button id='checkout' type="button" class="btn btn-default">Checkout</button>
+        </section>
     </div>
 </body>
 
